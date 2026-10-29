@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GameTracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">🎮 GameTracker</div>
+
+        <div class="nav-links">
+            <a href="#dashboard">Dashboard</a>
+            <a href="#games">My Games</a>
+            <a href="#stats">Statistics</a>
+        </div>
+    </nav>
+
+
+    <!-- Main Dashboard -->
+    <main>
+
+        <section id="dashboard" class="hero">
+            <div>
+                <p class="small-title">YOUR GAMING LIBRARY</p>
+
+                <h1>Track. Play.<br><span>Complete.</span></h1>
+
+                <p class="description">
+                    Manage your games, track your progress,
+                    record ratings and keep your gaming journey organized.
+                </p>
+
+               <button onclick="document.querySelector('.add-game-section').scrollIntoView({behavior: 'smooth'})">
+    + Add New Game
+</button>
+            </div>
+        </section>
+
+
+        <!-- Statistics Cards -->
+        <section class="stats-cards">
+
+            <div class="stat-card">
+                <h2>12</h2>
+                <p>Total Games</p>
+            </div>
+
+            <div class="stat-card">
+                <h2>4</h2>
+                <p>Currently Playing</p>
+            </div>
+
+            <div class="stat-card">
+                <h2>6</h2>
+                <p>Completed</p>
+            </div>
+
+            <div class="stat-card">
+                <h2>5</h2>
+                <p>Favourites</p>
+            </div>
+
+        </section>
+
+
+        <!-- My Games -->
+        <section id="games" class="games-section">
+
+            <div class="section-heading">
+                <div>
+                    <p class="small-title">YOUR COLLECTION</p>
+                    <h2>My Games</h2>
+                </div>
+
+                <input
+                    type="text"
+                    id="searchBox"
+                    placeholder="Search games..."
+                    onkeyup="searchGames()"
+                >
+            </div>
+
+
+            <div class="game-grid">
+
+                <div class="game-card">
+                    <div class="game-icon">⚔️</div>
+                    <h3>Elden Ring</h3>
+                    <p>Action RPG • PC</p>
+                    <span class="playing">Playing</span>
+                    <div class="game-info">
+                        <span>⭐ 9.5</span>
+                        <span>⏱ 42 hrs</span>
+                    </div>
+                </div>
+
+
+                <div class="game-card">
+                    <div class="game-icon">🏎️</div>
+                    <h3>Forza Horizon 5</h3>
+                    <p>Racing • Xbox</p>
+                    <span class="completed">Completed</span>
+                    <div class="game-info">
+                        <span>⭐ 9.0</span>
+                        <span>⏱ 35 hrs</span>
+                    </div>
+                </div>
+
+
+                <div class="game-card">
+                    <div class="game-icon">🧟</div>
+                    <h3>Resident Evil 4</h3>
+                    <p>Horror • PlayStation</p>
+                    <span class="want">Want to Play</span>
+                    <div class="game-info">
+                        <span>⭐ —</span>
+                        <span>⏱ 0 hrs</span>
+                    </div>
+                </div>
+
+
+                <div class="game-card">
+                    <div class="game-icon">🏹</div>
+                    <h3>Horizon Zero Dawn</h3>
+                    <p>Adventure • PC</p>
+                    <span class="completed">Completed</span>
+                    <div class="game-info">
+                        <span>⭐ 9.2</span>
+                        <span>⏱ 48 hrs</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        
+        <!-- Add New Game Form -->
+<section class="add-game-section">
+
+    <p class="small-title">BUILD YOUR LIBRARY</p>
+    <h2>Add a New Game</h2>
+
+    <div class="game-form">
+
+        <input type="text" id="gameName" placeholder="Game Name">
+
+        <input type="text" id="gameGenre" placeholder="Genre">
+
+        <select id="gamePlatform">
+            <option value="">Select Platform</option>
+            <option value="PC">PC</option>
+            <option value="PlayStation">PlayStation</option>
+            <option value="Xbox">Xbox</option>
+            <option value="Mobile">Mobile</option>
+        </select>
+
+        <select id="gameStatus">
+            <option value="">Select Status</option>
+            <option value="Want to Play">Want to Play</option>
+            <option value="Playing">Playing</option>
+            <option value="Completed">Completed</option>
+            <option value="Dropped">Dropped</option>
+        </select>
+
+        <input type="number" id="gameRating" placeholder="Rating (1-10)" min="1" max="10">
+
+        <input type="number" id="gameHours" placeholder="Hours Played">
+
+        <input type="number" id="gameYear" placeholder="Release Year">
+
+        <textarea id="gameNotes" placeholder="Notes about the game"></textarea>
+
+        <button id="saveGameBtn">Save Game</button>
+
+    </div>
+
+</section>
+       <section class="gamer-profile">
+    <h2>🎮 Your Gaming Profile</h2>
+
+    <div class="profile-box">
+        <h3>Gamer Level 7</h3>
+        <p>You're making great progress!</p>
+
+        <div class="level-bar">
+            <div class="level-fill"></div>
+        </div>
+
+        <span>70% progress to Level 8</span>
+    </div>
+</section>
+<section id="stats" class="statistics">
+
+
+            <p class="small-title">YOUR PROGRESS</p>
+
+            <h2>Gaming Statistics</h2>
+
+            <div class="progress-box">
+
+                <div>
+                    <p>Games Completed</p>
+
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+
+                    <span>50% of your library</span>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>© 2026 GameTracker • Gaming Library & Progress Management System</p>
+    </footer>
+
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
